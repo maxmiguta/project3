@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h2>Projection Systems products</h2>
+            <br/>
+            <!-- As the loop iterates through the contents of products_list, it assigns the current Product object in the list to the 'product' variable. -->
+            {% for product in products_list %}
+                <div class="list_item">
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4"><img class="card_image" src="{{ STATIC_URL }}{{ product.image }}"></div>
+                    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+                        <h3>{{ product.name }}</h3>
+                        <p class="gtext">{{ product.type }}</p>
+                        <p>{{ product.description }}</p>
+                        <p class="btext">&pound;{{ product.price }}</p>
+
+                        <form method="post" action="{% url 'add_to_cart' product.id %}">
+                            {% csrf_token %}
+                            <div class="input-group">
+                                <input name='quantity' type="number" min="1" max="999" class="form-control" placeholder="Quantity">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-success" type="submit">Add</button>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,76 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AV Empire</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/cerulean/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% block head_js %}<!-- The JS in checkout.html will only be injected here when a user clicks on Checkout -->
+    {% endblock head_js %}
+</head>
+<body>
+<div class="container-fluid"><!-- Enable the navbar box to stretch to the edges -->
+    <nav class="navbar navbar-default">
+        <div class="container"><!-- Force the navbar content to center as per default -->
+        <div class="navbar-header">
+			<a class="navbar-brand" href="/">AV Empire</a>
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myCollapsingList">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+		</div>
+        <ul id="myCollapsingList" class="nav navbar-nav navbar-right collapse navbar-collapse">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about/">About</a></li>
+            <li class="dropdown"><a href="/products/categories/" class="dropdown-toggle" data-toggle="dropdown" role="button">Products<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="/products/categories/">All Products</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="/products/visual">Projection Systems</a></li>
+                    <li><a href="/products/audio">Audio Technology</a></li>
+                    <li><a href="/products/interactive">Interactive Technology</a></li>
+                    <li><a href="/products/control">Control Systems</a></li>
+                </ul>
+            </li>
+            <li><a href="/forum/">Forum</a></li>
+            <!-- Extra navigation options depending on whether the user is logged in or not -->
+            {% if user.is_authenticated %}
+                <li><a href="{% url 'profile' %}">Profile</a></li>
+                <li><a href="{% url 'logout' %}">Log Out</a></li>
+            {% else %}
+                <li><a href="{% url 'register' %}">Register</a></li>
+                <li><a href="{% url 'login' %}">Log In</a></li>
+            {% endif %}
+            <!-- End navigation options -->
+            <li><a href="{% url 'view_cart' %}">
+                <i class="fa fa-shipping-cart"></i> Cart
+                {% if product_count > 0 %}
+                    <label class="badge badge-warning">{{ product_count }}</label>
+                {% endif %}
+            </a>
+            </li>
+            <li><a href="/contact/">Contact</a></li>
+        </ul>
+        </div>
+    </nav>
+
+   <div class="container">
+       {% block content %}
+       {% endblock %}
+   </div>
+
+   <footer id="footer">
+       <p class="btext text-center">Copyright &copy; AV Empire 2018</p>
+       <p class="btext text-center">Website designed and built by Max Miguta</p>
+   </footer>
+</div>
+</body>
+
+<!-- Bootstrap core JS files -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</html>

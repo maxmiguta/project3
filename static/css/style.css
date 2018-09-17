@@ -1,0 +1,160 @@
+/*Styling for the main template*/
+body {
+    background-color: antiquewhite;
+	padding-bottom: 0px;
+}
+.btext {
+	font-weight: bold;
+}
+.gtext {
+	font-weight: bold;
+	font-size: 16px;
+	color: #999;
+}
+#footer {
+	height: 80px;
+	padding-top: 10px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #8750bc;
+}
+
+/*Styling for Categories page*/
+.card {
+	/*min-width: 240px;*/
+	margin: 0px;
+	padding-top: 20px;
+	background-color: #fff;
+}
+.card_image {
+	width: 100%;
+}
+.bottom_button {
+	border-radius: 4px;
+	width: 100%;
+	background-color: rgba(129, 187, 201, .85);
+	padding: 1em .75em;
+	text-decoration: none;
+	color: #fff;
+}
+
+/*Styling for each product page*/
+.list_item {
+	height: 350px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+/*Cart icon in the navigation bar*/
+.badge {
+    padding-left: 9px;
+    padding-right: 9px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+}
+.label-warning[href],
+.badge-warning[href] {
+    background-color:  #c67605;
+}
+
+/*Styling for Checkout and Cart pages*/
+.product {
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+}
+.product-description {
+    min-height: 40px;
+}
+caption p {
+    word-wrap: break-word;
+}
+.row.row-flex {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+.panel-default {
+    border-color: transparent;
+    padding: 0 10px;
+}
+.panel-body {
+    height: 100%;
+    border: 1px solid #ddd;
+}
+
+/*Contact Form CSS*/
+#form-area {
+	width: 450px;
+	margin-top: 30px;
+	margin-right: auto;
+	margin-left: auto;
+}
+fieldset {
+	width: 450px;
+	border: 1px solid #999;
+	border-radius: 10px;
+	clear: both;
+	padding: 20px;
+	margin-bottom: 50px;
+	background-color:rgba(129, 187, 201, .3);
+}
+legend {
+	width: auto; /*overwrite Bootstrap's width: 100%;*/
+	font-size: 25px;
+	background-color: #fff;
+	border-radius: 5px;
+	border: 1px solid #999;
+	padding: 4px 15px;
+}
+label.field {
+	display: block;
+	text-align: right;
+	width: 100px;
+	float: left;
+	clear: both;
+}
+input {
+	display: inline-block;
+	width: 270px;
+	border-radius: 5px;
+	padding: 6px 8px;
+	margin-top: 6px;
+	margin-left: 5px;
+}
+textarea {
+	width: 270px;
+	height: 100px;
+	border-radius: 5px;
+	padding: 6px 8px;
+	margin-top: 6px;
+	margin-left: 5px;
+	border: 2px inset #eee;
+}
+/*amend the labels*/
+.field {
+	padding: 9px 8px;
+}
+label.submit {
+	margin-bottom: 40px;
+	/*margin-left: px;*/
+}
+
+/*Amend some Bootstrap default values*/
+/*overwrite the 15px padding*/
+.container-fluid {
+	padding-right: 0px;
+	padding-left: 0px;
+}
+/*remove rounded corners*/
+.navbar {
+	border-radius: 0px;
+}
+/*force the grid system to not have content spilling over on the right side*/
+.col-sm-6, .col-md-6, .col-lg-6 {
+	margin-right: -30px;
+}
