@@ -36,8 +36,8 @@ urlpatterns = [
     url(r'^login/$', accounts_views.login, name='login'),
     url(r'^logout/$', accounts_views.logout, name='logout'),
     url(r'^contact/$', views.get_contact),
-    url(r'^$', view_cart, name='view_cart'),
+    url(r'^cart/$', view_cart, name='view_cart'),
     url(r'^add/(?P<id>\d+)', add_to_cart, name='add_to_cart'),
     url(r'^adjust/(?P<id>\d+)', adjust_cart, name='adjust_cart'),
-    url(r'^$', checkout, name='checkout'),
+    url(r'^checkout/$', checkout, name='checkout'),
 ]
