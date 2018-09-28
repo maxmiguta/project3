@@ -49,9 +49,6 @@ INSTALLED_APPS = [
     'tinymce',
 ]
 
-# This is to tell Django that we're using a custom user model that uses
-# an email instead of the default username to authenticate users
-AUTH_USER_MODEL = 'accounts.User'
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
     'accounts.backends.EmailAuth',
@@ -107,7 +104,7 @@ DATABASES = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'mydb',
+        'NAME': 'av_db',
         'USER': 'root',
         'PASSWORD': 'dinamo98',
         'HOST': 'localhost',
