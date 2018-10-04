@@ -12,7 +12,7 @@
     {% endblock head_js %}
 </head>
 <body>
-<div class="container-fluid"><!-- Enable the navbar box to stretch to the edges -->
+<div class="container-fluid main"><!-- Enable the navbar box to stretch to the edges; also enable sticky footer -->
     <nav class="navbar navbar-default">
         <div class="container"><!-- Force the navbar content to center as per default -->
         <div class="navbar-header">
@@ -68,12 +68,12 @@
         </div>
     {% endif %}
 
-   <div class="container">
+   <div class="container main-content">
        {% block content %}
        {% endblock %}
    </div>
 
-   <footer id="footer">
+   <footer id="footer" class="Site-footer">
        <p class="btext text-center">Copyright &copy; AV Empire 2018</p>
        <p class="btext text-center">Website designed and built by Max Miguta</p>
    </footer>
