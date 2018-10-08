@@ -3,32 +3,40 @@
 {% block content %}
     <div class="row">
         <div class="card col-xs-12 col-sm-6 col-md-6 col-lg-6">
-            <img class="card_image" src="{% static "img/1.png" %}">
-            <div class="card_bottom">
-                <h2 class="card_head">Projection Systems</h2>
-                <button class="bottom_button">Click to see our products</button>
-            </div>
+            <a href="/products/visual">
+                <div class="zoom">
+                    <img class="img-responsive" src="{% static "img/1.png" %}" alt="Projection Systems">
+                    <div class="overlay"><h1>See our products</h1></div>
+                </div>
+                <h2>Projection Systems</h2>
+            </a>
         </div>
         <div class="card col-xs-12 col-sm-6 col-md-6 col-lg-6">
-            <img class="card_image" src="{% static "img/2.png" %}">
-            <div class="card_bottom">
-                <h2 class="card_head">Audio Technology</h2>
-                <button class="bottom_button">Click to see our products</button>
-            </div>
+            <a href="/products/audio">
+                <div class="zoom">
+                    <img class="img-responsive" src="{% static "img/2.png" %}" alt="Audio Technology">
+                    <div class="overlay"><h1>See our products</h1></div>
+                </div>
+                <h2>Audio Technology</h2>
+            </a>
         </div>
         <div class="card col-xs-12 col-sm-6 col-md-6 col-lg-6">
-            <img class="card_image" src="{% static "img/3.png" %}">
-            <div class="card_bottom">
-                <h2 class="card_head">Interactive Technology</h2>
-                <button class="bottom_button">Click to see our products</button>
-            </div>
+            <a href="/products/interactive">
+                <div class="zoom">
+                    <img class="img-responsive" src="{% static "img/3.png" %}" alt="Interactive Technology">
+                    <div class="overlay"><h1>See our products</h1></div>
+                </div>
+                <h2>Interactive Technology</h2>
+            </a>
         </div>
         <div class="card col-xs-12 col-sm-6 col-md-6 col-lg-6">
-            <img class="card_image" src="{% static "img/4.png" %}">
-            <div class="card_bottom">
-                <h2 class="card_head">Control Systems</h2>
-                <button class="bottom_button">Click to see our products</button>
-            </div>
+            <a href="/products/control">
+                <div class="zoom">
+                    <img class="img-responsive" src="{% static "img/4.png" %}" alt="Control Systems">
+                    <div class="overlay"><h1>See our products</h1></div>
+                </div>
+                <h2>Control Systems</h2>
+            </a>
         </div>
     </div>
 {% endblock %}

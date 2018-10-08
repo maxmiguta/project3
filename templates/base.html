@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/cerulean/bootstrap.min.css">
     <link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    {% block head_js %}<!-- The JS in checkout.html will only be injected here when a user clicks on Checkout -->
-    {% endblock head_js %}
 </head>
 <body>
 <div class="container-fluid main"><!-- Enable the navbar box to stretch to the edges; also enable sticky footer -->
@@ -68,14 +66,14 @@
         </div>
     {% endif %}
 
-   <div class="container main-content">
+   <div class="container main-content"><!-- Enable sticky footer; this section has to go just above it -->
        {% block content %}
        {% endblock %}
    </div>
 
-   <footer id="footer" class="Site-footer">
-       <p class="btext text-center">Copyright &copy; AV Empire 2018</p>
-       <p class="btext text-center">Website designed and built by Max Miguta</p>
+   <footer id="footer">
+       <p class="footer-text text-center">Copyright &copy; AV Empire 2018</p>
+       <p class="footer-text text-center">Website designed and built by Max Miguta</p>
    </footer>
 </div>
 </body>
@@ -83,4 +81,6 @@
 <!-- Bootstrap core JS files -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+{% block head_js %}<!-- The JS in checkout.html will only be injected here when a user clicks on Checkout -->
+{% endblock head_js %}
 </html>
