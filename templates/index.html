@@ -1,5 +1,18 @@
 {% extends 'base.html' %}
+{% load staticfiles %}
 {% block content %}
-    <h2>We Are Social</h2>
-    <p>Our very simple site</p>
+    <div id="banner" class="container-fluid"><div class="logo-box"><div class="overlay-img-box"><img class="overlay-img" src="{% static "img/logo.png" %}"></div></div></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1>Welcome to the Future of Audio Visual</h1>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                <p>We aim to supply both private and commercial customers. Our main focus is on businesses, where demand is growing all the time. Plenty has already been written about the professional AV industry and its impact on daily and office life. It's a multibillion-dollar industry that will keep expanding and we can expect the pro AV sales into various markets ranging from hospitality to healthcare to reach double-digit growth around the world by 2022. AV Empire also recognises the importance of AV technology to the educational sector, where the need to present material. The impact technology has made on teaching and education in the last decade alone cannot be overstated and demand for advanced presentation equipment is set to keep growing.</p>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                <p>If you would like to discuss your AV requirements in more detail then you are never more than one click or a phone call away. Our team of AV professionals will be more than happy to help.</p>
+            </div>
+        </div>
+    </div>
 {% endblock %}
