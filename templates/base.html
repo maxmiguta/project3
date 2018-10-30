@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AV Empire</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/cerulean/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/cerulean/bootstrap.min.css"-->
     <link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
@@ -34,20 +35,19 @@
                     <li><a href="/products/control">Control Systems</a></li>
                 </ul>
             </li>
-            <li><a href="/forum/">Forum</a></li>
             <!-- Extra navigation options depending on whether the user is logged in or not -->
             {% if user.is_authenticated %}
-                <li><a href="{% url 'profile' %}">Profile</a></li>
-                <li><a href="{% url 'logout' %}">Log Out</a></li>
+                <li><a href="{% url 'profile' %}"><i class="fa fa-user"></i> Profile</a></li>
+                <li><a href="{% url 'logout' %}"><i class="fa fa-sign-out-alt"></i> Log Out</a></li>
             {% else %}
-                <li><a href="{% url 'register' %}">Register</a></li>
-                <li><a href="{% url 'login' %}">Log In</a></li>
+                <li><a href="{% url 'register' %}"><i class="fa fa-user-plus"></i> Register</a></li>
+                <li><a href="{% url 'login' %}"><i class="fa fa-sign-in-alt"></i> Log In</a></li>
             {% endif %}
             <!-- End navigation options -->
             <li><a href="{% url 'view_cart' %}">
-                <i class="fa fa-shipping-cart"></i>Cart
+                <i class="fa fa-shopping-cart"></i> Cart
                 {% if product_count > 0 %}
-                    <label class="badge badge-warning">{{ product_count }}</label>
+                    <label class="badge my-badge">{{ product_count }}</label>
                 {% endif %}
             </a>
             </li>
@@ -66,12 +66,18 @@
         </div>
     {% endif %}
 
-   <div class="container main-content"><!-- Enable sticky footer; this section has to go just above it -->
+   <div class="main-content"><!-- Enable sticky footer; this section has to go just above it -->
        {% block content %}
        {% endblock %}
    </div>
 
-   <footer id="footer">
+   <footer id="main-footer">
+       <div id="social-footer" class="text-center">
+           <a href="https://www.facebook.com/Code.InstituteIRL/" target=_blank><i class="fab fa-facebook-square fa-3x social-icon"></i></a>
+           <a href="https://twitter.com/CodersInstitute" target=_blank><i class="fab fa-twitter-square fa-3x social-icon"></i></a>
+           <a href="https://www.instagram.com/codeinstitute/" target=_blank><i class="fab fa-instagram fa-3x social-icon"></i></a>
+           <a href="https://github.com/maxmiguta" target=_blank><i class="fab fa-github-square fa-3x social-icon"></i></a>
+       </div>
        <p class="footer-text text-center">Copyright &copy; AV Empire 2018</p>
        <p class="footer-text text-center">Website designed and built by Max Miguta</p>
    </footer>
@@ -81,6 +87,7 @@
 <!-- Bootstrap core JS files -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.4.1/js/all.js"></script>
 {% block head_js %}<!-- The JS in checkout.html will only be injected here when a user clicks on Checkout -->
 {% endblock head_js %}
 </html>
