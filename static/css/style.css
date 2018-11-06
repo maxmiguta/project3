@@ -3,8 +3,7 @@ body {
     background-color: #faf9f5;
 	padding-bottom: 0px;
 }
-h1 {
-	font-size: 475%;
+h2 {
 	color: #83508b;
 }
 /*styles to enable sticky footer*/
@@ -56,7 +55,7 @@ h1 {
 	color: #88d6e5;
 }
 
-/*Styling for home page*/
+/*Styling for Home page*/
 #banner {
 	background-image: url(/static/img/front_cover.jpg);
 	background-size: cover;
@@ -103,10 +102,47 @@ h1 {
 	object-fit: contain;
 	object-position: top;
 }
+.heading {
+	margin-top: 20px;
+	font-size: 478%;
+	color: #83508b;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+	.heading {
+		font-size: 394%;
+	}
+}
+@media (min-width: 768px) and (max-width: 991px) {
+	.heading {
+		font-size: 301%;
+	}
+}
+@media (max-width: 767px) {
+	.heading {
+		font-size: 220%;
+	}
+}
 article {
 	margin-bottom: 30px;
 }
+/*add some spacing on small screen width*/
+@media (max-width: 767px) {
+	.gap {
+		margin-top: 15px;
+		margin-bottom: 15px;
+	}
+}
 .home-para {
+	font-size: 14px;
+}
+@media (min-width: 992px) {
+	.home-para {
+		font-size: 16px;
+	}
+}
+
+/*Styling for About page*/
+.about-para {
 	font-size: 16px;
 }
 
@@ -192,7 +228,7 @@ article {
 	width: 100%;
 }
 
-/*Cart icon in the navigation bar*/
+/*Amend badge that displays product count next to the Cart link*/
 .badge {
     padding-left: 9px;
     padding-right: 9px;
@@ -236,19 +272,19 @@ caption p {
 
 /*Contact Form CSS*/
 #form-area {
-	width: 450px;
+	float: none;
 	margin-top: 30px;
 	margin-right: auto;
 	margin-left: auto;
 }
 fieldset {
-	width: 450px;
 	border: 1px solid #999;
 	border-radius: 10px;
-	clear: both;
 	padding: 20px;
 	margin-bottom: 50px;
-	background-color:rgba(129, 187, 201, .3);
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #edd0f2;
 }
 legend {
 	width: auto; /*overwrite Bootstrap's width: 100%;*/
@@ -257,24 +293,29 @@ legend {
 	border-radius: 5px;
 	border: 1px solid #999;
 	padding: 4px 15px;
+	margin-bottom: 0px;
 }
 label.field {
 	display: block;
 	text-align: right;
+	line-height: 28px;
 	width: 100px;
 	float: left;
 	clear: both;
 }
+@media (max-width: 670px) {
+	label.field {
+		text-align: left;
+	}
+}
 input {
 	display: inline-block;
-	width: 270px;
 	border-radius: 5px;
 	padding: 6px 8px;
 	margin-top: 6px;
 	margin-left: 5px;
 }
 textarea {
-	width: 270px;
 	height: 100px;
 	border-radius: 5px;
 	padding: 6px 8px;
@@ -287,8 +328,18 @@ textarea {
 	padding: 9px 8px;
 }
 label.submit {
-	margin-bottom: 40px;
-	/*margin-left: px;*/
+	float: none;
+    margin-right: auto;
+	margin-left: auto;
+}
+/*to centre the Submit button*/
+.form-button {
+	display: block;
+	float: none;
+	margin-top: 20px;
+    margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 30px;
 }
 
 /*Amend some Bootstrap default values*/
@@ -344,7 +395,7 @@ label.submit {
 	color: #fff;
 }
 /*force a slightly different standard and hover colour scheme on the drop-down menu links when navbar is collapsed*/
-@media (max-width: 768px) {
+@media (max-width: 991px) {
 	.dropdown-menu > li > a {
 		color: #fff !important;
 	}
@@ -374,7 +425,7 @@ label.submit {
 
 /*Enable the navbar to collapse at a different breakpoint other than the default 768px*/
 /*this works for Bootstrap version 3.1+ but may not work for version 4 or higher*/
-@media (max-width: 770px) {
+@media (max-width: 991px) {
 	.navbar-header {
         float: none;
     }
@@ -402,6 +453,36 @@ label.submit {
 	.collapse.in {
         display: block !important;
     }
+	.navbar-nav .open .dropdown-menu {
+		position: static;
+		float: none;
+        width: auto;
+		margin-top: 0;
+		background-color: transparent;
+		border: 0;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+	}
+	.navbar-nav .open .dropdown-menu > li > a {
+		line-height: 20px;
+	}
+	.navbar-nav .open .dropdown-menu > li > a,
+	.navbar-nav .open .dropdown-menu .dropdown-header {
+		padding: 5px 15px 5px 25px;
+	}
+	.dropdown-menu > li > a {
+		display: block;
+		padding: 3px 20px;
+		clear: both;
+		font-weight: normal;
+		line-height: 1.42857143;
+		color: #333;
+		white-space: nowrap;
+	}
+	/*force the display of the top side of the border on the collapsing menu*/
+	.navbar-collapse {
+		border-top: 1px solid #e7e7e7;
+	}
 }
 /*force the grid system to not have content spilling over on the right side
 .col-sm-6, .col-md-6, .col-lg-6 {
