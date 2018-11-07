@@ -10,4 +10,4 @@ python-dateutil==2.7.3
 six==1.11.0
 wheel==0.31.1
 stripe
-whitenoise==4.1
+whitenoise==3.2
