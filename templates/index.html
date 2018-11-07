@@ -2,17 +2,44 @@
 {% load staticfiles %}
 {% block content %}
     <div id="banner" class="container-fluid"><div class="logo-box"><div class="overlay-img-box"><img class="overlay-img" src="{% static "img/logo.png" %}"></div></div></div>
-    <div class="container">
+    <section class="container">
         <div class="row">
-            <div class="col-xs-12">
-                <h1>Welcome to the Future of Audio Visual</h1>
-            </div>
-            <div class="col-xs-12 col-sm-6">
-                <p>We aim to supply both private and commercial customers. Our main focus is on businesses, where demand is growing all the time. Plenty has already been written about the professional AV industry and its impact on daily and office life. It's a multibillion-dollar industry that will keep expanding and we can expect the pro AV sales into various markets ranging from hospitality to healthcare to reach double-digit growth around the world by 2022. AV Empire also recognises the importance of AV technology to the educational sector, where the need to present material. The impact technology has made on teaching and education in the last decade alone cannot be overstated and demand for advanced presentation equipment is set to keep growing.</p>
-            </div>
-            <div class="col-xs-12 col-sm-6">
-                <p>If you would like to discuss your AV requirements in more detail then you are never more than one click or a phone call away. Our team of AV professionals will be more than happy to help.</p>
-            </div>
+            <article class="col-xs-12">
+                <div class="heading">Welcome to the Future of Audio Visual</div>
+            </article>
+            <article class="col-xs-12">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-4 gap">
+                        <img class="img-responsive" src="{% static "img/av_boardroom.jpg" %}" alt="Corporate AV">
+                    </div>
+                    <div class="col-xs-12 col-sm-8 gap home-para">
+                        <p>Our main focus is on corporate clients, where demand is growing all the time. Plenty has already been said about the professional AV industry and its impact on daily and office life. It's a multibillion-dollar industry that will keep expanding and we can expect the pro AV sales into various markets ranging from hospitality to healthcare to reach double-digit growth around the world by 2022.</p>
+                        <p>However, we also know how much demand there is for AV technology from individuals, looking for example to kit out their homes with the latest state-of-the-art equipment. That is why we aim to cater for both commercial organisations and private customers.</p>
+                    </div>
+                </div>
+            </article>
+            <article class="col-xs-12">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-4 gap">
+                        <img class="img-responsive" src="{% static "img/av_classroom.jpg" %}" alt="Education AV">
+                    </div>
+                    <div class="col-xs-12 col-sm-8 gap home-para">
+                        <p>AV Empire also recognises the importance of AV technology to the educational sector, with the widespread adoption of presentation technologies in schools and universities demonstrating the effectiveness of this medium as a tool of instruction. The increased use of computers and interactive technology in the classroom has also meant an infinitely more immersive learning experience for all concerned. The impact AV technology has made on teaching and education in the last decade alone certainly cannot be overstated and demand for advanced presentation equipment is set to keep growing.</p>
+                    </div>
+                </div>
+            </article>
+            <article class="col-xs-12">
+                <hr>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-4 gap">
+                        <img class="img-responsive" src="{% static "img/contact_icons.jpg" %}" alt="Contact icons">
+                    </div>
+                    <div class="col-xs-12 col-sm-8 gap home-para">
+                        <p>If you would like to discuss your AV requirements in more detail then you are never more than one click or a phone call away. Our team of fully trained AV professionals will be more than happy to help.</p>
+                        <p>To make an initial enquiry please go to our <a href="/contact/">contact page</a>.</p>
+                    </div>
+                </div>
+            </article>
         </div>
-    </div>
+    </section>
 {% endblock %}
