@@ -1,42 +1,44 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 {% block content %}
+    <div class="container">
     <div class="row">
-        <div class="card col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="card col-xs-12 col-sm-6">
             <a href="/products/visual">
                 <div class="zoom">
-                    <img class="img-responsive" src="{% static "img/1.png" %}" alt="Projection Systems">
+                    <img class="img-responsive" src="{% static "img/projector.jpg" %}" alt="Projection Systems">
                     <div class="overlay"><h1>See our products</h1></div>
                 </div>
                 <h2>Projection Systems</h2>
             </a>
         </div>
-        <div class="card col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="card col-xs-12 col-sm-6">
             <a href="/products/audio">
                 <div class="zoom">
-                    <img class="img-responsive" src="{% static "img/2.png" %}" alt="Audio Technology">
+                    <img class="img-responsive" src="{% static "img/speakers.jpg" %}" alt="Audio Technology">
                     <div class="overlay"><h1>See our products</h1></div>
                 </div>
                 <h2>Audio Technology</h2>
             </a>
         </div>
-        <div class="card col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="card col-xs-12 col-sm-6">
             <a href="/products/interactive">
                 <div class="zoom">
-                    <img class="img-responsive" src="{% static "img/3.png" %}" alt="Interactive Technology">
+                    <img class="img-responsive" src="{% static "img/interactive.jpg" %}" alt="Interactive Technology">
                     <div class="overlay"><h1>See our products</h1></div>
                 </div>
                 <h2>Interactive Technology</h2>
             </a>
         </div>
-        <div class="card col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="card col-xs-12 col-sm-6">
             <a href="/products/control">
                 <div class="zoom">
-                    <img class="img-responsive" src="{% static "img/4.png" %}" alt="Control Systems">
+                    <img class="img-responsive" src="{% static "img/control.jpg" %}" alt="Control Systems">
                     <div class="overlay"><h1>See our products</h1></div>
                 </div>
                 <h2>Control Systems</h2>
             </a>
         </div>
+    </div>
     </div>
 {% endblock %}
