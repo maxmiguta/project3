@@ -26,7 +26,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.get_index, name='index'),
     url(r'^about/$', views.get_about),
-    url(r'^products/categories/$', products_views.products),
+    url(r'^products/categories/$', products_views.products, name='products'),
     url(r'^products/audio/$', products_views.audio),
     url(r'^products/control/$', products_views.control),
     url(r'^products/interactive/$', products_views.interactive),
