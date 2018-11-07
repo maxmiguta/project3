@@ -1,22 +1,39 @@
 {% extends 'base.html' %}
 {% block content %}
+    <section class="container">
+    <h2>Contact Us</h2>
+    <br>
+    <p>Our fully qualified and experienced consultants are here to help you out with any AV challenges that may stand in your way. Please fill out the form below to get started.</p>
     <div id="form-area">
-	<form onsubmit="alert('Form submitted successfully.')" method="post">
-		<fieldset>
-			<legend>Contact Form</legend>
-			<label for="fname" class="field">First name:</label>
-			<input type="text" id="fname" placeholder="Enter your first name" name="fname" autocomplete="on" required autofocus />
-			<label for="lname" class="field">Last name:</label>
-			<input type="text" id="lname" placeholder="Enter your last name" name="lname" autocomplete="on" required />
-			<label for="email" class="field">Email:</label>
-			<input type="email" id="email" placeholder="Enter your email" name="email" autocomplete="on" required />
-			<label for="telephone" class="field">Telephone:</label>
-			<input type="tel" id="telephone" placeholder="Enter your number" name="telephone" pattern="[0][0-9]{10}" title="Expecting 11 digit number beginning with 0" />
-			<label for="comm" class="field">Comments:</label>
-			<textarea id="comm" placeholder="Enter any comments" name="comm"></textarea>
-			<label for="submit" class="field submit"></label>
-			<input type="submit" id="submit" value="Submit"/>
-		</fieldset>
-	</form>
+        <form onsubmit="alert('Form submitted successfully.')" method="post">
+            <fieldset>
+			    <legend>Contact Form</legend>
+			    <div class="row">
+				    <label for="fname" class="field col-xs-6">First name:</label>
+				    <input type="text" id="fname" placeholder="Enter your first name" name="fname" autocomplete="on" required autofocus class="col-xs-10" />
+			    </div>
+			    <div class="row">
+				    <label for="lname" class="field col-xs-6">Last name:</label>
+				    <input type="text" id="lname" placeholder="Enter your last name" name="lname" autocomplete="on" required class="col-xs-10" />
+			    </div>
+			    <div class="row">
+				    <label for="email" class="field col-xs-6">Email:</label>
+				    <input type="email" id="email" placeholder="Enter your email" name="email" autocomplete="on" required class="col-xs-10" />
+			    </div>
+			    <div class="row">
+				    <label for="telephone" class="field col-xs-6">Telephone:</label>
+				    <input type="tel" id="telephone" placeholder="Enter your number" name="telephone" pattern="[0][0-9]{10}" title="Expecting 11 digit number beginning with 0" class="col-xs-10" />
+			    </div>
+			    <div class="row">
+				    <label for="comm" class="field col-xs-6">Enquiry:</label>
+				    <textarea id="comm" placeholder="Enter any comments" name="comm" class="col-xs-10"></textarea>
+			    </div>
+			    <div class="row">
+			        <!--<label for="submit" class="field submit"></label>-->
+			        <input type="submit" id="submit" value="Submit" class="form-button col-xs-4"/>
+			    </div>
+		    </fieldset>
+	    </form>
 	</div>
+    </section>
 {% endblock %}
