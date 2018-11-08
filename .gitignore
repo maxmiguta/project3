@@ -1,7 +1,5 @@
 .idea/
 venv/
-checkout/migrations/0001_initial.py
-products/migrations/0001_initial.py
 db.sqlite3
 env.py
 *.pyc
