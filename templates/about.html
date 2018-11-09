@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load staticfiles %}
 {% block content %}
     <section class="container about-para">
         <h2>About AV Empire</h2>
@@ -6,5 +7,6 @@
         <p><strong>AV Empire</strong> is a small company established in early 2018 that primarily supplies many of the latest Audio-Visual products through its online web store at very competitive prices. Our partners are some of the world's leading suppliers in AV communication, such as Sony, 3M, Bose and AMX. We also have a small team of experts who possess a wealth of technical knowledge and experience - they are fully qualified to offer comprehensive advice in relation to the best products that will fulfill your specific AV requirements, whatever those may be.</p>
         <p>Additionally, we offer an equipment <dfn>installation service</dfn> specially aimed at our business customers, who typically require a more comprehensive AV solution when purchasing an array of products. This service is provided on a case by case basis and the customer will need to get in touch directly with our team to discuss their requirements.</p>
         <p>The company currently operates just throughout Scotland, however we aim to expand our operations throughout all of the UK within the next year.</p>
+        <img class="img-responsive" src="{% static "img/contact_icons.jpg" %}" alt="Contact icons">
     </section>
 {% endblock %}
