@@ -243,39 +243,44 @@ article {
 
 /*Styling for Cart and Checkout pages*/
 .product {
-    background-size: contain;
-    background-position: center center;
+	background-size: contain;
+    background-position: center;
     background-repeat: no-repeat;
-    width: 150px;
-    height: 150px;
-    margin: 0 auto;
+	height: 20vh;
 }
 .product-description {
     min-height: 40px;
 }
-caption p {
+caption {
     word-wrap: break-word;
 }
+/*properly stacks multiple product items*/
 .row.row-flex {
     display: flex;
     flex-wrap: wrap;
     margin-top: 30px;
 }
-.panel-default {
-    border-color: transparent;
-    padding: 0 10px;
+.row-flex {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
 }
+.panel-outer {
+	margin-bottom: 20px;
+}
+/*creates an inner border for product items*/
 .panel-body {
     height: 100%;
     border: 1px solid #ddd;
+	border-radius: 4px;
+}
+.form-margin {
+	margin-bottom: 15px !important;
 }
 
-/*Contact Form CSS*/
+/*Contact (and Payment) Form CSS*/
 #form-area {
-	float: none;
-	margin-top: 30px;
-	margin-right: auto;
-	margin-left: auto;
+	margin-top: 50px;
 }
 fieldset {
 	border: 1px solid #999;
@@ -308,6 +313,7 @@ label.field {
 		text-align: left;
 	}
 }
+/*specifically target the contact form*/
 input {
 	display: inline-block;
 	border-radius: 5px;
