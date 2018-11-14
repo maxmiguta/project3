@@ -300,6 +300,10 @@ legend {
 	padding: 4px 15px;
 	margin-bottom: 0px;
 }
+/*apply darker border to all fields on payment form*/
+.form-control {
+	border: 1px solid #9b9797;
+}
 label.field {
 	display: block;
 	text-align: right;
@@ -314,17 +318,17 @@ label.field {
 	}
 }
 /*specifically target the contact form*/
-input {
+input.contact {
 	display: inline-block;
 	border-radius: 5px;
-	padding: 6px 8px;
+	padding: 6px 10px;
 	margin-top: 6px;
 	margin-left: 5px;
 }
 textarea {
 	height: 100px;
 	border-radius: 5px;
-	padding: 6px 8px;
+	padding: 6px 10px !important;
 	margin-top: 6px;
 	margin-left: 5px;
 	border: 2px inset #eee;
@@ -342,10 +346,9 @@ label.submit {
 .form-button {
 	display: block;
 	float: none;
-	margin-top: 20px;
-    margin-right: auto;
-	margin-left: auto;
-	margin-bottom: 30px;
+	margin: 20px auto 30px auto;
+	border-radius: 5px;
+	padding: 6px 8px;
 }
 
 /*Amend some Bootstrap default values*/
