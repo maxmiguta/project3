@@ -5,33 +5,12 @@
     <br>
     <p>Our fully qualified and experienced consultants are here to help you out with any AV challenges that may stand in your way. Please fill out the form below to get started.</p>
     <div id="form-area">
-        <form onsubmit="alert('Form submitted successfully.')" method="post">
+        <form method="post">
             <fieldset>
 			    <legend>Contact Form</legend>
-			    <div class="row">
-				    <label class="field col-xs-2" for="fname">First name:</label>
-				    <input class="contact col-xs-10" type="text" id="fname" placeholder="Enter your first name" name="fname" autocomplete="on" required autofocus/>
-			    </div>
-			    <div class="row">
-				    <label class="field col-xs-2" for="lname">Last name:</label>
-				    <input class="contact col-xs-10" type="text" id="lname" placeholder="Enter your last name" name="lname" autocomplete="on" required/>
-			    </div>
-			    <div class="row">
-				    <label class="field col-xs-2" for="email">Email:</label>
-				    <input class="contact col-xs-10" type="email" id="email" placeholder="Enter your email" name="email" autocomplete="on" required/>
-			    </div>
-			    <div class="row">
-				    <label class="field col-xs-2" for="telephone">Telephone:</label>
-				    <input class="contact col-xs-10" type="tel" id="telephone" placeholder="Enter your number" name="telephone" pattern="[0][0-9]{10}" title="Expecting 11 digit number beginning with 0"/>
-			    </div>
-			    <div class="row">
-				    <label class="field col-xs-2" for="comm">Enquiry:</label>
-				    <textarea class="col-xs-10" id="comm" placeholder="Enter any comments" name="comm"></textarea>
-			    </div>
-			    <div class="row">
-			        <!--<label for="submit" class="field submit"></label>-->
-			        <input class="form-button col-xs-4" type="submit" id="submit" value="Submit"/>
-			    </div>
+			    {% csrf_token %}
+				{{ form.as_p }}
+				<input class="btn btn-primary" type="submit" value="Submit">
 		    </fieldset>
 	    </form>
 	</div>

@@ -19,6 +19,7 @@ from django.contrib import admin
 from home import views
 from accounts import views as accounts_views
 from products import views as products_views
+from contact import views as contact_views
 from cart.views import view_cart, add_to_cart, adjust_cart
 from checkout.views import checkout
 
@@ -35,7 +36,7 @@ urlpatterns = [
     url(r'^profile/$', accounts_views.profile, name='profile'),
     url(r'^login/$', accounts_views.login, name='login'),
     url(r'^logout/$', accounts_views.logout, name='logout'),
-    url(r'^contact/$', views.get_contact),
+    url(r'^contact/$', contact_views.contact),
     url(r'^cart/$', view_cart, name='view_cart'),
     url(r'^add/(?P<id>\d+)', add_to_cart, name='add_to_cart'),
     url(r'^adjust/(?P<id>\d+)', adjust_cart, name='adjust_cart'),
