@@ -1,5 +1,4 @@
 {% extends 'base.html' %}
-{% load static from staticfiles %}
 {% block content %}
     <div class="container">
     <div class="row">
@@ -13,7 +12,7 @@
                         <h3>{{ product.name }}</h3>
                         <p class="gtext">{{ product.type }}</p>
                         <p>{{ product.description }}</p>
-                        <p><strong>£{{ product.price }}</strong></p>
+                        <p><strong>&pound;{{ product.price }}</strong></p>
 
                         <form method="post" action="{% url 'add_to_cart' product.id %}">
                             {% csrf_token %}
