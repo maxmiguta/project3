@@ -1,4 +1,6 @@
 {% extends 'base.html' %}
+{% load bootstrap_tags %}
+
 {% block content %}
     <section class="container">
     <h2>Contact Us</h2>
@@ -8,9 +10,11 @@
         <form method="post">
             <fieldset>
 			    <legend>Contact Form</legend>
-			    {% csrf_token %}
-				{{ form.as_p }}
-				<input class="btn btn-primary" type="submit" value="Submit">
+				{% csrf_token %}
+			    <div class="form-group col-md-12">
+					{{ form|as_bootstrap }}
+					<input class="btn btn-primary" type="submit" value="Submit">
+				</div>
 		    </fieldset>
 	    </form>
 	</div>

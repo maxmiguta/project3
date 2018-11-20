@@ -3,7 +3,7 @@ from django import forms
 
 
 class ContactForm(forms.Form):
-    contact_name = forms.CharField(label='Enter your name', required=True)
-    contact_email = forms.EmailField(label='Enter your email', required=True)
-	#phone_number = PhoneNumberField(label='Enter your phone number')
-    message = forms.CharField(label='Enter your message', widget=forms.Textarea, required=True)
+    contact_name = forms.CharField(label='Full name', widget=forms.TextInput({'placeholder': 'Enter your full name'}), required=True)
+    contact_email = forms.EmailField(label='Email', widget=forms.TextInput({'placeholder': 'Enter your email'}), required=True)
+	#phone_number = PhoneNumberField(label='Phone number', widget=forms.TextInput({'placeholder': 'Enter your phone number'}))
+    message = forms.CharField(label='Your enquiry', widget=forms.Textarea({'placeholder': 'Enter your message'}), required=True)

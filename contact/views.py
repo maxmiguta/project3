@@ -31,7 +31,7 @@ def contact(request):
                 "New contact form submission",
                 content,
                 "AV Empire" +'',
-                [contact_name],
+                ['max_miguta@yahoo.com'],
                 headers = {'Reply To': contact_email }
             )
             email.send()
