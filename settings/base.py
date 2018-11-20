@@ -21,9 +21,8 @@ INSTALLED_APPS = [
     'products',
     'cart',
     'checkout',
-	'emoticons',
+    'emoticons',
     'django_forms_bootstrap',
-    'django_smtp_ssl',
 ]
 
 AUTHENTICATION_BACKENDS = (
