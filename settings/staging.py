@@ -27,7 +27,6 @@ STRIPE_SECRET = os.getenv('STRIPE_SECRET')
 
 # Use Django's email backend
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'max.miguta@gmail.com'
 EMAIL_HOST_PASSWORD = 'blackwolf14'
