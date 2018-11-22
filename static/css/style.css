@@ -16,11 +16,6 @@ h2 {
 	flex: 1;
 }
 /*end styles*/
-.gtext {
-	font-weight: bold;
-	font-size: 16px;
-	color: #999;
-}
 .footer-text {
 	font-weight: bold;
 	color: #fff;
@@ -121,6 +116,12 @@ h2 {
 	.heading {
 		font-size: 220%;
 	}
+}
+.subheading {
+	margin-top: 10px;
+	font-weight: bold;
+	font-size: 27px;
+	color: #999;
 }
 article {
 	margin-bottom: 30px;
@@ -227,6 +228,11 @@ article {
 .product_image {
 	width: 100%;
 }
+.gtext {
+	font-weight: bold;
+	font-size: 16px;
+	color: #999;
+}
 
 /*Amend badge that displays product count next to the Cart link*/
 .badge {
@@ -278,7 +284,7 @@ caption {
 	margin-bottom: 15px !important;
 }
 
-/*Contact (and Payment) Form CSS*/
+/*Styling for Payment and Contact form*/
 #form-area {
 	margin-top: 50px;
 }
@@ -298,57 +304,16 @@ legend {
 	border-radius: 5px;
 	border: 1px solid #999;
 	padding: 4px 15px;
+	margin-left: 15px;
 	margin-bottom: 0px;
 }
-/*apply darker border to all fields on payment form*/
+/*apply darker border to all fields on both forms*/
 .form-control {
 	border: 1px solid #9b9797;
 }
-label.field {
-	display: block;
-	text-align: right;
-	line-height: 28px;
-	width: 100px;
-	float: left;
-	clear: both;
-}
-@media (max-width: 670px) {
-	label.field {
-		text-align: left;
-	}
-}
-/*specifically target the contact form*/
-input.contact {
-	display: inline-block;
-	border-radius: 5px;
-	padding: 6px 10px;
-	margin-top: 6px;
-	margin-left: 5px;
-}
+/*modify text area on contact form*/
 textarea {
-	height: 100px;
-	border-radius: 5px;
-	padding: 6px 10px !important;
-	margin-top: 6px;
-	margin-left: 5px;
-	border: 2px inset #eee;
-}
-/*amend the labels*/
-.field {
-	padding: 9px 8px;
-}
-label.submit {
-	float: none;
-    margin-right: auto;
-	margin-left: auto;
-}
-/*to centre the Submit button*/
-.form-button {
-	display: block;
-	float: none;
-	margin: 20px auto 30px auto;
-	border-radius: 5px;
-	padding: 6px 8px;
+	height: 150px !important;
 }
 
 /*Amend some Bootstrap default values*/
