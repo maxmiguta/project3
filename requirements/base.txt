@@ -12,3 +12,4 @@ wheel==0.31.1
 stripe
 whitenoise==3.2
 django-phonenumber-field
+phonenumbers
