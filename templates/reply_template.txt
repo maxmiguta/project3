@@ -10,6 +10,9 @@ Contact Name:
 Email:
 {{ contact_email }}
 
+Phone:
+{{ phone_number }}
+
 Enquiry:
 {{ message|safe|striptags }}
 
