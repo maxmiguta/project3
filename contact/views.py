@@ -11,7 +11,7 @@ def contact(request):
     form_class = ContactForm
 
     if request.method == 'POST':
-        form = form_class(data=request.POST)
+        form = form_class(request.POST)
 
         if form.is_valid():
             contact_name = request.POST.get('contact_name', '')
@@ -34,7 +34,7 @@ def contact(request):
                 content,
                 "AV Empire" + '',
                 ['max_miguta@yahoo.com'],
-                headers = {'Reply To': contact_email}
+                headers={'Reply To': contact_email}
             )
             email.send()
             messages.success(request, 'Thanks for getting in touch! We will get back to you as soon as we can.')
