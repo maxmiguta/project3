@@ -4,14 +4,12 @@ from django.contrib import messages
 from django.template.loader import get_template
 from .forms import ContactForm
 
-# Create your views here.
-
 
 def contact(request):
     form_class = ContactForm
 
     if request.method == 'POST':
-        form = form_class(request.POST)
+        form = form_class(data=request.POST)
 
         if form.is_valid():
             contact_name = request.POST.get('contact_name', '')
@@ -19,7 +17,7 @@ def contact(request):
             phone_number = request.POST.get('phone_number', '')
             message = request.POST.get('message', '')
 
-            # Email the profile with the contact information
+            # Email the user with their contact information
             template = get_template('reply_template.txt')
             context = {
                 'contact_name': contact_name,
@@ -34,7 +32,7 @@ def contact(request):
                 content,
                 "AV Empire" + '',
                 ['max_miguta@yahoo.com'],
-                headers={'Reply To': contact_email}
+                headers = {'Reply To': contact_email}
             )
             email.send()
             messages.success(request, 'Thanks for getting in touch! We will get back to you as soon as we can.')
