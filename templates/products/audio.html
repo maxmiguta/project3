@@ -1,8 +1,18 @@
 {% extends 'base.html' %}
+
 {% block content %}
     <div class="container">
     <div class="row">
         <div class="col-xs-12">
+            <ol class="breadcrumb bcrumb-margins">
+                <li class="breadcrumb-item">
+                    <a href="{% url 'index' %}">Home</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="{% url 'products' %}">Products</a>
+                </li>
+                <li class="breadcrumb-item active">Audio Technology</li>
+            </ol>
             <h2>Audio Technology</h2>
             <!-- As the loop iterates through the contents of products_list, it assigns the current Product object in the list to the 'product' variable. -->
             {% for product in products_list %}
