@@ -1,20 +1,27 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
 {% load bootstrap_tags %}
+
 {% block content %}
     <div class="container">
-    <h2>Please register</h2>
-    <br>
-    <form method="post" action="{% url 'register' %}">
-        <fieldset class="form-group">
-            <legend>Create a new account</legend>
-            <p>Already got an account? <a href="{% url 'login' %}">Sign In</a></p>
-            <br/>
-            {% csrf_token %}
-            {{ form | as_bootstrap }}
-            <div class="form-group">
-                <button type="submit" class="btn btn-primary">Create account</button>
-            </div>
-        </fieldset>
-    </form>
+        <ol class="breadcrumb bcrumb-margins">
+            <li class="breadcrumb-item">
+                <a href="{% url 'index' %}">Home</a>
+            </li>
+            <li class="breadcrumb-item active">Register</li>
+        </ol>
+        <h2>Please register</h2>
+        <br>
+        <form method="post" action="{% url 'register' %}">
+            <fieldset class="form-group">
+                <legend>Create a new account</legend>
+                <p>Already got an account? <a href="{% url 'login' %}">Sign In</a></p>
+                <br/>
+                {% csrf_token %}
+                {{ form | as_bootstrap }}
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Create account</button>
+                </div>
+            </fieldset>
+        </form>
     </div>
 {% endblock %}

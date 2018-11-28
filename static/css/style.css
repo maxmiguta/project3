@@ -1,8 +1,30 @@
 /*Styling for the main template*/
 body {
     background-color: #faf9f5;
-	padding-bottom: 0px;
 }
+.bcrumb-margins {
+	margin-top: 35px;
+	margin-bottom: 30px;
+}
+/*amend some Bootstrap styles*/
+.breadcrumb {
+	background-color: #f2e6f4;
+	font-size: 16px; /*standardise text size*/
+}
+.breadcrumb-item > a {
+	color: #91599a;
+}
+.breadcrumb-item > a:hover {
+	text-decoration: none;
+	color: #a1a1a1;
+}
+.breadcrumb-item::before {
+	color: #777 !important;
+}
+.breadcrumb-item.active::before {
+	color: #777;
+}
+/*end amend*/
 h2 {
 	color: #91599a;
 }
@@ -159,7 +181,12 @@ article {
 /*Styling for Categories page*/
 .card {
 	padding: 20px;
-	background-color: #fff;
+}
+.product-heading {
+	color: #bd8bc4;
+}
+.hover-link:hover {
+	color: #bd8bc4;
 }
 /*image hover effects*/
 .zoom {

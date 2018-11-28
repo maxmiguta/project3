@@ -1,7 +1,14 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
+
 {% block content %}
     <div class="container">
-        <h2>Success!</h2>
+        <ol class="breadcrumb bcrumb-margins">
+            <li class="breadcrumb-item">
+                <a href="{% url 'index' %}">Home</a>
+            </li>
+            <li class="breadcrumb-item active">Profile</li>
+        </ol>
+        <h2>Your User Profile</h2>
         <br>
         <p>You are logged in as <b>{{ user.username }}</b></p>
     </div>
