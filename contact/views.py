@@ -37,6 +37,8 @@ def contact(request):
             email.send()
             messages.success(request, 'Thanks for getting in touch! We will get back to you as soon as we can.')
             return redirect('index')
+        else:
+            print(form.errors)
 
     return render(request, 'contact.html', {
         'form': form_class,
