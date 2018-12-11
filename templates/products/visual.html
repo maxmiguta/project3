@@ -28,7 +28,7 @@
                             {% csrf_token %}
                             <div class="input-group">
 								<!-- added value="1" to input to prevent the page throwing an "invalid literal" error when a user clicks 'Add' with no value present -->
-                                <input name='quantity' type="number" min="1" max="999" value="1" class="form-control" placeholder="Quantity">
+                                <input name="quantity" type="number" min="1" max="999" value="1" class="form-control" placeholder="Quantity">
                                 <span class="input-group-btn">
                                     <button class="btn btn-success" type="submit">Add</button>
                                 </span>

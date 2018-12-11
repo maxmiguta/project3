@@ -49,7 +49,11 @@
     <div>
         <p style="font-size: 16px"><b><u>Total</u></b></p>
         <p style="font-size: 16px"><b>£{{ total }}</b></p>
-        <a href="{% url 'checkout' %}" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span> Checkout</a>
+        {% if cart_items %}
+            <a href="{% url 'checkout' %}" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span> Checkout</a>
+        {% else %}
+            <button class="btn btn-primary" disabled><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span> Checkout</button>
+        {% endif %}
     </div>
 </div>
 {% endblock %}
