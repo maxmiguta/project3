@@ -56,7 +56,8 @@
         </ul>
         </div>
     </nav>
-    <!-- Displays a 'success' message if the user's payment has been accepted -->
+    <!-- Displays a 'success' message if the user's payment has been accepted or if contact form has been submitted -->
+    <!-- also when a user has successfully registered, logged in or logged out -->
     {% if messages %}
         <div class="alert alert-success">
             <div class="messages">
@@ -96,13 +97,12 @@ $(document).ready(function() {
     formInputs.each(function() {
 		var thisInput = $(this);
 		thisInput.on('change', function() {
-		    console.log($(this).sibling());
-		    console.log($(this).sibling().child());
 			var userInput = $(this).val();
-			var thisButton = userInput.closest("button");
-			if (!userInput) {
+			var thisButton = thisInput.siblings().children();
+			console.log(userInput);
+			if (userInput === "") {
 				thisButton.attr('disabled', true);
-			} else if (userInput) {
+			} else if (userInput !== "") {
 				thisButton.attr('disabled', false);
             }
         });
