@@ -1,21 +1,8 @@
 from base import *
 import dj_database_url
 
-DEBUG = True
-"""
-# Local Database
-# https://docs.djangoproject.com/en/1.11/ref/settings/#databases
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'av_db',
-        'USER': 'root',
-        'PASSWORD': 'dinamo98',
-        'HOST': 'localhost',
-        'PORT': '3306',
-    }
-}
-"""
+DEBUG = False
+
 # Load the ClearDB connection details from the environment variable
 DATABASES = {
     'default': dj_database_url.config('CLEARDB_DATABASE_URL')
