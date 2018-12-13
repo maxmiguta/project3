@@ -83,15 +83,17 @@ In brief, I changed the following inputs on the exact same tests to see if they 
 
 \* When a test was failing, each error displayed was an "AssertionError". In the case of the first test the error was "False is not true" because it is the only one with the statement `self.assertTrue(form.is_valid())`. All the other tests use `self.assertFalse` and so displayed *AssertionError: True is not false*.
 
-The tests for the **accounts** app can be found in *tests.py* located in the 'accounts' directory.
+The tests for the **accounts** app can be found in *tests.py* located in the *'accounts'* directory.
 
 I also tested the Order form in my **checkout** app using the same procedures. For brevity, I tested only half of the 'required' fields, since all it was testing for is validation taking place when a user is not filling in a certain field, going through each, one by one.
 
-The tests for the **checkout** app can be found in *tests.py* located in the 'checkout' directory.
+The tests for the **checkout** app can be found in *tests.py* located in the *'checkout'* directory.
 
 All in all, I was able to make the tests pass and also fail, so they are certainly doing their job.
 
 ### Manual Testing
+<details>
+<summary>Click to see details</summary>
 
 I conducted manual tests on a number of features on the website - these are documented below.
 
@@ -133,6 +135,8 @@ With regards to displaying all the requested product information, I checked ever
 
 As for storage of user data, I tested by registering different users, logging out and then back in and every time authentication was successful. Therefore the logical conclusion here is that the database functions efficiently and as intended.
 
+</details>
+
 ## Deployment
 
 Firstly, to prepare for deployment, my project's main settings file had to be adapted for the different environments that the project would go through. I created a **settings** package/directory (as an app) and within it I set up **base.py**, **dev.py** and **staging.py**. The base.py is the main settings file (for the default environment) and contains settings that are shared across all three environments. The next file provides the settings for the project's development environment and the final file provides the settings for the staging environment - respectively. Each of the latter files adds some extra settings (to the base.py) that are only needed for that particular environment.
@@ -159,7 +163,7 @@ Additionally, the cloud database needed to be populated with the same data that 
 
 ## Wireframing
 
-I used **Balsamiq Mockups** to create a wireframe/storyboard for my website and the mockup file can be found in the *docs* folder.
+I used **Balsamiq Mockups** to create a wireframe/storyboard for my website and the mockup files can be found in the *docs* folder.
 
 ## Credits
 
@@ -169,3 +173,4 @@ Courtesy of the trade association [AVIXA](https://www.avixa.org/about-avixa/who-
 
 ### Acknowledgements
 
+A special thank you to **@mr_bim** and **@mormoran** who helped me out with some minor but nonetheless tricky aspects of the project.
