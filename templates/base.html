@@ -90,7 +90,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="https://use.fontawesome.com/releases/v5.4.1/js/all.js"></script>
-<!-- jQuery used to prevent users submitting empty values when adding or adjusting product items-->
+<!-- jQuery used to prevent users submitting empty values when adding or adjusting product items (courtesy of @mormoran) -->
 <script>
 $(document).ready(function() {
 	var formInputs = $(".form-control");
@@ -98,17 +98,17 @@ $(document).ready(function() {
 		var thisInput = $(this);
 		thisInput.on('change', function() {
 			var userInput = $(this).val();
-			var thisButton = thisInput.siblings().children();
-			console.log(userInput);
+			var adjustCart = $(".adjust-cart");
 			if (userInput === "") {
-				thisButton.attr('disabled', true);
+				thisInput.parent().find("button").attr('disabled', true);
+				adjustCart.attr('disabled', true);
 			} else if (userInput !== "") {
-				thisButton.attr('disabled', false);
+				thisInput.parent().find("button").attr('disabled', false);
+				adjustCart.attr('disabled', false);
             }
         });
 	});
 });
-console.log("Hello world");
 </script>
 {% block head_js %}<!-- The JS in checkout.html will only be injected here when a user clicks on Checkout -->
 {% endblock head_js %}

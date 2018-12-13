@@ -420,6 +420,10 @@ textarea {
 .navbar-default .navbar-toggle .icon-bar {
 	background-color: #fff;
 }
+/*remove the bottom margin on the 'success' message that appears on the main template*/
+.alert {
+	margin-bottom: 0 !important;
+}
 
 /*Enable the navbar to collapse at a different breakpoint other than the default 768px*/
 /*this works for Bootstrap version 3.1+ but may not work for version 4 or higher*/
