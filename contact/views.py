@@ -6,10 +6,10 @@ from .forms import ContactForm
 
 
 def contact(request):
-    form_class = ContactForm
+    form = ContactForm
 
     if request.method == 'POST':
-        form = form_class(data=request.POST)
+        form = form(data=request.POST)
 
         if form.is_valid():
             contact_name = request.POST.get('contact_name', '')
@@ -41,5 +41,5 @@ def contact(request):
             print(form.errors)
 
     return render(request, 'contact.html', {
-        'form': form_class,
+        'form': form,
     })
