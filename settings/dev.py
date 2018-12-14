@@ -9,7 +9,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'av_db',
         'USER': 'root',
-        'PASSWORD': 'dinamo98',
+        'PASSWORD': os.getenv('MYSQL_PASS'),
         'HOST': 'localhost',
         'PORT': '3306',
     }

@@ -177,6 +177,18 @@ article {
 .about-para {
 	font-size: 16px;
 }
+/*display the right image based on screen size*/
+.small-screen {
+	display: none;
+}
+@media (max-width: 575px) {
+	.large-screen {
+		display: none;
+	}
+	.small-screen {
+		display: block;
+	}
+}
 
 /*Styling for Categories page*/
 .card {
