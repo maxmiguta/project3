@@ -119,6 +119,10 @@ h2 {
 	object-fit: contain;
 	object-position: top;
 }
+/*hide the logo until page has loaded*/
+.logo {
+	visibility: hidden;
+}
 .heading {
 	margin-top: 30px;
 	font-size: 478%;

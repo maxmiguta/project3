@@ -109,6 +109,10 @@ $(document).ready(function() {
         });
 	});
 });
+// Make a hidden image visible once page has loaded
+$(window).on("load", function() {
+    $(".logo").css("visibility", "visible");
+});
 </script>
 {% block head_js %}<!-- The JS in checkout.html will only be injected here when a user clicks on Checkout -->
 {% endblock head_js %}
