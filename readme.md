@@ -56,9 +56,9 @@ Google Chrome
 Internet Explorer
 Safari
 ```
-The website looks and works fine at full screen size on all of the above mentioned browsers. I used the developer tools in Google Chrome to check how the site looks on smaller screen devices and it passes that test also.
+The website looks and works fine at full screen size on all of the above mentioned browsers. I used the developer tools in Google Chrome and Firefox, as well as my own Android phone and an iPad, to check how the site looks on smaller screen devices and it passes that test also.
 
-### Automated Testing
+### Automated testing
 
 To begin with I carried out some automated testing, which has the benefits of speedy application to potentially large units of code and reusability.
 
@@ -71,17 +71,20 @@ More specifically, validation was tested for the following scenarios:
 * A user not filling in the first password field
 * A user not filling in the second password field (password confirmation)
 
-In each case the tests need to pass in order to confirm that the validation is working.
+In each case the tests needed to pass in order to confirm that the validation is working.
 
 However, I also needed to be able to make them fail, so I could be sure that they equally recognise when the opposite scenario is true.
-In brief, I changed the following inputs on the exact same tests to see if they would fail because now inputs wouldn't meet conditions required to make the tests pass in the first place (that is, validation wouldn't be triggered by wrong or missing input), respectively:
+
+So, in brief, I simulated the opposite conditions for the same tests as follows:
 * All required fields filled in *
 * Both username and email present
 * Both passwords match
 * First password filled in
 * Second password filled in
 
-\* When a test was failing, each error displayed was an "AssertionError". In the case of the first test the error was "False is not true" because it is the only one with the statement `self.assertTrue(form.is_valid())`. All the other tests use `self.assertFalse` and so displayed *AssertionError: True is not false*.
+\* When a test failed, each error displayed was an "AssertionError". In the case of the first test the error given was "False is not true" because it is the only one with the statement `self.assertTrue(form.is_valid())`. All the other tests use `self.assertFalse` and so displayed *AssertionError: True is not false*.
+
+Since this time the inputs didn't meet the conditions required to make the tests pass - that is, validation wasn't triggered by wrong or missing input - they failed, as expected.
 
 The tests for the **accounts** app can be found in *tests.py* located in the *'accounts'* directory.
 
@@ -89,9 +92,9 @@ I also tested the Order form in my **checkout** app using the same procedures. F
 
 The tests for the **checkout** app can be found in *tests.py* located in the *'checkout'* directory.
 
-All in all, I was able to make the tests pass and also fail, so they are certainly doing their job.
+All in all, I was able to make the tests pass and also fail when using expected inputs, so they are certainly working as intended.
 
-### Manual Testing
+### Manual testing
 <details>
 <summary>Click to see details</summary>
 
@@ -123,9 +126,21 @@ Additionally, after you submit the form it redirects you to the products page an
 
 #### Contact page
 
-I tested the Contact form on this page and verified that all the required fields do indeed have a validation message coming up for each of them (asking the user to fill it in) if the user tries to submit the form while leaving any of them blank. The one exception to this is the *Phone number* field, which is not required, however if the user enters an invalid number (in this case a number of any length other than 10 or 11 digits) then an error message will come up. If this field is left blank though - provided everything else is filled in - the form will still submit successfully.
+I tested the Contact form on this page and verified that all the required fields do indeed have a validation message coming up for each of them (asking the user to fill it in) if the user tries to submit the form while leaving any of them blank. The one exception to this is the *Phone number* field, which is not required, however if the user enters an invalid number (in this case a number of any length other than 10 or 11 digits) then an error message will come up. If this field is left blank though - provided everything else is filled in - the form will still submit successfully. So I have verified that the form submission is accepted when inputs are valid and denied when an invalid input is provided for any of the fields.
 
 Upon submission of the form the user should be redirected to the home page and get a successful submission notification near the top of the page. Additionally, the user should receive an email on the same email address they provided on the form, telling them that their enquiry has been received and somebody will be in touch. The email reply should also contain confirmation of all the details the user provided on the form. After testing I can confirm that all of this works as intended.
+
+#### Issue with Contact form
+
+I had to set up the use of an external mail server for sending emails with automatic replies to users who filled out my contact form and for this project we were advised to use a simple and free provider, namely **Gmail**. Simple, that is, as long as you have a Google/Gmail account, which I do.
+
+Now, because Google take the security of people's accounts and associated email accounts quite seriously for obvious reasons, there is unfortunately an unavoidable problem that comes with using your personal Google account as a server for sending emails. The first time that I tried to submit the contact form on my live site I got a *server error* message because Google was blocking my 'sign in' attempts as they thought somebody else was trying to sign into my account from an "unrecognised device" and/or in an "unusual location".
+
+I was able to resolve the issue initially by going to my Google account and turning on an option to "allow less secure apps" to access my account. However, it turned out that an additional measure had to be taken to get rid of the server error and that was to go to a *DisplayUnlockCaptcha* page on my account and click a button to "allow access to my Google account".
+
+When it seemed that this email issue was finally resolved it then happened again about a couple of weeks later. Thankfully I was able to take care of it straight away by going to the *DisplayUnlockCaptcha* page once more. However, if it can happen to me again so soon after verifying my account and while I was testing the contact form on the same (recognised) device then it certainly happen to anybody else testing my form from another location and/or device.
+
+Users of my website need to be aware of this potential problem should they get a *server error* message when trying to submit the contact form. Unfortunately, this is a third-party issue and is therefore out of my control.
 
 #### Database
 
@@ -161,6 +176,8 @@ One of the last things to do was to set up a database on Heroku. Under the *Reso
 
 Additionally, the cloud database needed to be populated with the same data that I was using locally, so first of all, migrations were run on Heroku to create tables on **ClearDB**. Then the local database was 'dumped' into a *json* file (using the **dumpdata** command) which was then pushed to my GitHub repository. Finally, the data was loaded into the staging database on Heroku using the generated *json* file.
 
+It is worth mentioning that all the product information in the local database was initially loaded up from a csv file called *price_list.csv* that can be found in the *docs* folder.
+
 ## Wireframing
 
 I used **Balsamiq Mockups** to create a wireframe/storyboard for my website and the mockup files can be found in the *docs* folder.
@@ -169,7 +186,7 @@ I used **Balsamiq Mockups** to create a wireframe/storyboard for my website and 
 
 ### Content
 
-Courtesy of the trade association [AVIXA](https://www.avixa.org/about-avixa/who-we-are/press-room/2017/10/02/avixa-releases-global-av-industry-outlook-and-trends-analysis)
+Courtesy of the press release published by the trade association [AVIXA](https://www.avixa.org/about-avixa/who-we-are/press-room/2017/10/02/avixa-releases-global-av-industry-outlook-and-trends-analysis)
 
 ### Acknowledgements
 
