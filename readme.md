@@ -38,6 +38,7 @@ You can see the deployed version of the website [here](https://av-empire.herokua
 - HTML5
 - CSS3
 - JavaScript
+- jQuery
 - Bootstrap 3
 - Python 2.7
 - Django
@@ -47,16 +48,20 @@ You can see the deployed version of the website [here](https://av-empire.herokua
 
 ## Testing
 
-### Responsive testing
+### Responsive testing and code validation
 
-#### Browsers checked
+#### Browsers and devices
 ```
 Mozilla Firefox
 Google Chrome
 Internet Explorer
 Safari
 ```
-The website looks and works fine at full screen size on all of the above mentioned browsers. I used the developer tools in Google Chrome and Firefox, as well as my own Android phone and an iPad, to check how the site looks on smaller screen devices and it passes that test also.
+The website looks good and works fine at full screen size on all of the above mentioned browsers. I used the developer tools in Google Chrome and Firefox, as well as my own Android phone and an iPad, to check how the site looks on smaller screen devices and it does well in all respects.
+
+#### Code validation
+
+I put my code through *W3C* (for both HTML & CSS) and *JSHint* online validation services to make sure the code is as clean and error-free as possible.
 
 ### Automated testing
 
@@ -97,6 +102,7 @@ All in all, I was able to make the tests pass and also fail when using expected 
 ### Manual testing
 <details>
 <summary>Click to see details</summary>
+<br />
 
 I conducted manual tests on a number of features on the website - these are documented below.
 
@@ -138,7 +144,7 @@ Now, because Google take the security of people's accounts and associated email 
 
 I was able to resolve the issue initially by going to my Google account and turning on an option to "allow less secure apps" to access my account. However, it turned out that an additional measure had to be taken to get rid of the server error and that was to go to a *DisplayUnlockCaptcha* page on my account and click a button to "allow access to my Google account".
 
-When it seemed that this email issue was finally resolved it then happened again about a couple of weeks later. Thankfully I was able to take care of it straight away by going to the *DisplayUnlockCaptcha* page once more. However, if it can happen to me again so soon after verifying my account and while I was testing the contact form on the same (recognised) device then it certainly happen to anybody else testing my form from another location and/or device.
+When it seemed that this email issue was finally resolved it then happened again about a couple of weeks later. Thankfully I was able to take care of it straight away by going to the *DisplayUnlockCaptcha* page once more. However, if it can happen to me again so soon after verifying my account and while I was testing the contact form on the same (recognised) device then it can certainly happen to anybody else testing my form from another location and/or device.
 
 Users of my website need to be aware of this potential problem should they get a *server error* message when trying to submit the contact form. Unfortunately, this is a third-party issue and is therefore out of my control.
 

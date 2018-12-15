@@ -56,7 +56,7 @@ h2 {
 	background-color: #d1a9d7;
 }
 .social-icon {
-	margin: 16px 8px 0px;
+	margin: 16px 8px 0;
 }
 /*amend default Font Awesome icon colours*/
 .fa-facebook-square,
@@ -92,24 +92,24 @@ h2 {
 .logo-box {
 	position: relative;
 	width: 300px;
-	height: 0px;
+	height: 0;
 	padding-bottom: 200px; /*controls the size and/or vertical positioning of the image*/
 }
 @media (min-width: 1180px) {
 	.logo-box {
 		width: 33%;
-		height: 0px;
+		height: 0;
 		padding-bottom: 20%;
 		top: 10px;
-		left: 0px;
+		left: 0;
 	}
 }
 /*this class/div fills the space using 100% width and height*/
 .overlay-img-box {
 	position: absolute;
-	top: 0px;
-	bottom: 0px; /*makes the bottom stay in the right place relative to parent*/
-	left: 0px;
+	top: 0;
+	bottom: 0; /*makes the bottom stay in the right place relative to parent*/
+	left: 0;
 	width: 100%;
 	height: 100%;
 }
@@ -345,7 +345,7 @@ legend {
 	border: 1px solid #999;
 	padding: 4px 15px;
 	margin-left: 15px;
-	margin-bottom: 0px;
+	margin-bottom: 0;
 }
 /*apply darker border to all fields on both forms*/
 .form-control {
@@ -359,13 +359,13 @@ textarea {
 /*Amend some Bootstrap default values*/
 /*overwrite the 15px padding*/
 .container-fluid {
-	padding-right: 0px;
-	padding-left: 0px;
+	padding-right: 0;
+	padding-left: 0;
 }
 /*remove bottom margin and rounded corners*/
 .navbar {
-	margin-bottom: 0px;
-	border-radius: 0px;
+	margin-bottom: 0;
+	border-radius: 0;
 }
 /*background colour for the whole length of the navbar menu*/
 .navbar-default {
