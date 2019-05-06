@@ -1,5 +1,7 @@
 # AV Empire Django website
 
+![Website preview](static/img/website_preview.jpg)
+
 ## Overview
 
 ### What is this website for?
