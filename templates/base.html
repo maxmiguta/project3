@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AV Empire</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <!--href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/cerulean/bootstrap.min.css"-->
     <link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="icon" href="{% static 'img/favicon.ico' %}">
@@ -80,7 +79,7 @@
            <a href="https://www.instagram.com/codeinstitute/" target=_blank><i class="fab fa-instagram fa-3x social-icon"></i></a>
            <a href="https://github.com/maxmiguta" target=_blank><i class="fab fa-github-square fa-3x social-icon"></i></a>
        </div>
-       <p class="footer-text text-center">Copyright &copy; AV Empire 2018</p>
+       <p class="footer-text text-center">Copyright &copy; AV Empire 2019</p>
        <p class="footer-text text-center">Website designed and built by Max Miguta</p>
    </footer>
 </div>
@@ -92,27 +91,27 @@
 <script src="https://use.fontawesome.com/releases/v5.4.1/js/all.js"></script>
 <!-- jQuery used to prevent users submitting empty values when adding or adjusting product items (courtesy of @mormoran) -->
 <script>
-$(document).ready(function() {
-	var formInputs = $(".form-control");
-    formInputs.each(function() {
-		var thisInput = $(this);
-		thisInput.on('change', function() {
-			var userInput = $(this).val();
-			var adjustCart = $(".adjust-cart");
-			if (userInput === "") {
-				thisInput.parent().find("button").attr('disabled', true);
-				adjustCart.attr('disabled', true);
-			} else if (userInput !== "") {
-				thisInput.parent().find("button").attr('disabled', false);
-				adjustCart.attr('disabled', false);
-            }
+    $(document).ready(function () {
+        var formInputs = $(".form-control");
+        formInputs.each(function () {
+            var thisInput = $(this);
+            thisInput.on('change', function () {
+                var userInput = $(this).val();
+                var adjustCart = $(".adjust-cart");
+                if (userInput === "") {
+                    thisInput.parent().find("button").attr('disabled', true);
+                    adjustCart.attr('disabled', true);
+                } else if (userInput !== "") {
+                    thisInput.parent().find("button").attr('disabled', false);
+                    adjustCart.attr('disabled', false);
+                }
+            });
         });
-	});
-});
-// Make a hidden image visible once page has loaded
-$(window).on("load", function() {
-    $(".logo").css("visibility", "visible");
-});
+    });
+    // Make a hidden image visible once page has loaded
+    $(window).on("load", function () {
+        $(".logo").css("visibility", "visible");
+    });
 </script>
 {% block head_js %}<!-- The JS in checkout.html will only be injected here when a user clicks on Checkout -->
 {% endblock head_js %}
